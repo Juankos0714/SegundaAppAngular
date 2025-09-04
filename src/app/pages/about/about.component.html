@@ -1,0 +1,50 @@
+<div class="about-page">
+  <div class="container">
+    <div class="about-hero">
+      <div class="about-content">
+        <h1 class="about-title">Sobre Mí</h1>
+        <p class="about-description">
+          Soy un desarrollador apasionado con más de 2 años de experiencia creando 
+          soluciones digitales innovadoras. Me especializo en tecnologías frontend 
+          y backend, siempre buscando la excelencia en cada proyecto.
+        </p>
+      </div>
+      <div class="about-image">
+        <img [src]="aboutImage" alt="Workspace" />
+      </div>
+    </div>
+    
+    <div class="about-sections">
+      <div class="profile-section">
+        <app-user-profile></app-user-profile>
+      </div>
+      
+      <div class="details-section">
+        <div class="experience-section">
+          <h2>Experiencia Profesional</h2>
+          <div class="timeline">
+            <div *ngFor="let job of experience()" class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>{{ job.position }}</h3>
+                <h4>{{ job.company }}</h4>
+                <span class="period">{{ job.period }}</span>
+                <p>{{ job.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="education-section">
+          <h2>Educación</h2>
+          <div class="education-list">
+            <div *ngFor="let edu of education()" class="education-item">
+              <h3>{{ edu.degree }}</h3>
+              <p>{{ edu.institution }} - {{ edu.year }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

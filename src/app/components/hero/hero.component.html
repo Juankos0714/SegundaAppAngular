@@ -1,0 +1,28 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Hola, soy <span class="highlight">{{ name() }}</span>
+        </h1>
+        <h2 class="hero-subtitle">{{ title() }}</h2>
+        <p class="hero-description">{{ description() }}</p>
+        
+        <div class="skills-tags">
+          <span *ngFor="let skill of skills()" class="skill-tag">
+            {{ skill }}
+          </span>
+        </div>  
+        
+        <div class="hero-buttons">
+          <a href="/projects" class="btn btn-primary">Ver Proyectos</a>
+          <a href="/contact" class="btn btn-secondary">Contáctame</a>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <img [src]="profileImage" [alt]="name()" />
+      </div>
+    </div>
+  </div>
+</section>

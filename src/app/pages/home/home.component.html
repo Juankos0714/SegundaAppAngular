@@ -1,0 +1,23 @@
+<div class="home-page">
+  <app-hero></app-hero>
+  
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <app-stats-card 
+          *ngFor="let stat of stats" 
+          [icon]="stat.icon"
+          [number]="stat.number"
+          [label]="stat.label"
+          [color]="stat.color"
+        ></app-stats-card>
+      </div>
+    </div>
+  </section>
+  
+  <app-skills></app-skills>
+  
+  <div class="container">
+    <app-testimonials></app-testimonials>
+  </div>
+</div>

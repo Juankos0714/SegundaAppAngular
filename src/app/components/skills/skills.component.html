@@ -1,0 +1,36 @@
+<section class="skills-section">
+  <div class="container">
+    <h2 class="section-title">Habilidades Técnicas</h2>
+    
+    <div class="category-filters">
+      <button 
+        *ngFor="let category of categories" 
+        class="filter-btn"
+        [class.active]="selectedCategory() === category"
+        (click)="filterByCategory(category)"
+      >
+        {{ category === 'all' ? 'Todas' : category }}
+      </button>
+    </div>
+    
+    <div class="skills-grid">
+      <div *ngFor="let skill of filteredSkills()" class="skill-item">
+        <div class="skill-header">
+          <span class="skill-icon">{{ skill.icon }}</span>
+          <span class="skill-name">{{ skill.name }}</span>
+          <span class="skill-percentage">{{ skill.level }}%</span>
+        </div>
+        
+        <div class="skill-bar">
+          <div 
+            class="skill-progress" 
+            [style.width.%]="skill.level"
+            [class]="'progress-' + skill.category.toLowerCase()"
+          ></div>
+        </div>
+        
+        <div class="skill-category">{{ skill.category }}</div>
+      </div>
+    </div>
+  </div>
+</section>

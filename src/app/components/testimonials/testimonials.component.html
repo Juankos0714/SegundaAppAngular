@@ -1,0 +1,43 @@
+<section class="testimonials">
+  <h3 class="testimonials-title">Lo que dicen los clientes</h3>
+  
+  <div class="testimonials-slider">
+    <div class="testimonial-card">
+      <div class="testimonial-header">
+        <img 
+          [src]="testimonials()[currentTestimonial()].avatar" 
+          [alt]="testimonials()[currentTestimonial()].name"
+          class="testimonial-avatar"
+        />
+        <div class="testimonial-info">
+          <h4 class="testimonial-name">{{ testimonials()[currentTestimonial()].name }}</h4>
+          <p class="testimonial-role">
+            {{ testimonials()[currentTestimonial()].role }} en {{ testimonials()[currentTestimonial()].company }}
+          </p>
+          <div class="testimonial-rating">
+            <span *ngFor="let star of getStars(testimonials()[currentTestimonial()].rating)">
+              {{ star }}
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <blockquote class="testimonial-message">
+        "{{ testimonials()[currentTestimonial()].message }}"
+      </blockquote>
+    </div>
+    
+    <div class="testimonials-controls">
+      <button class="control-btn" (click)="prevTestimonial()" title="Anterior">‹</button>
+      <div class="testimonials-dots">
+        <button 
+          *ngFor="let testimonial of testimonials(); let i = index"
+          class="dot"
+          [class.active]="currentTestimonial() === i"
+          (click)="currentTestimonial.set(i)"
+        ></button>
+      </div>
+      <button class="control-btn" (click)="nextTestimonial()" title="Siguiente">›</button>
+    </div>
+  </div>
+</section>

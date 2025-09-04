@@ -1,0 +1,37 @@
+<div class="projects-page">
+  <div class="container">
+    <div class="projects-header">
+      <h1 class="page-title">Mis Proyectos</h1>
+      <p class="page-description">
+        Una colección de proyectos que demuestran mis habilidades técnicas y creatividad.
+        Cada proyecto representa un desafío único y una solución innovadora.
+      </p>
+    </div>
+    
+    <div class="filter-section">
+      <h3>Filtrar por Tecnología:</h3>
+      <div class="filter-buttons">
+        <button 
+          *ngFor="let tech of technologies"
+          class="filter-btn"
+          [class.active]="selectedFilter() === tech"
+          (click)="filterProjects(tech)"
+        >
+          {{ tech === 'all' ? 'Todas' : tech }}
+        </button>
+      </div>
+    </div>
+    
+    <div class="projects-grid">
+      <app-project-card 
+        *ngFor="let project of filteredProjects()" 
+        [project]="project"
+      ></app-project-card>
+    </div>
+    
+    <div *ngIf="filteredProjects().length === 0" class="no-results">
+      <h3>No se encontraron proyectos</h3>
+      <p>No hay proyectos que coincidan con el filtro seleccionado.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="contact-page">
+  <div class="container">
+    <div class="contact-header">
+      <h1 class="page-title">Trabajemos Juntos</h1>
+      <p class="page-description">
+        ¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas y ayudarte 
+        a convertirlas en realidad. Contáctame y hablemos sobre tu próximo proyecto.
+      </p>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-info-section">
+        <h2>Información de Contacto</h2>
+        
+        <div class="contact-methods">
+          <a 
+            *ngFor="let info of contactInfo()" 
+            [href]="info.link" 
+            class="contact-method"
+          >
+            <span class="contact-icon">{{ info.icon }}</span>
+            <div class="contact-details">
+              <span class="contact-label">{{ info.label }}</span>
+              <span class="contact-value">{{ info.value }}</span>
+            </div>
+          </a>
+        </div>
+        
+        <div class="additional-info">
+          <div class="info-card">
+            <h3>⏰ Horarios de Trabajo</h3>
+            <div class="working-hours">
+              <div *ngFor="let schedule of workingHours()" class="hour-item">
+                <span class="day">{{ schedule.day }}</span>
+                <span class="hours">{{ schedule.hours }}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <h3>⚡ Tiempo de Respuesta</h3>
+            <p class="response-time">Generalmente respondo en menos de {{ responseTime() }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-section">
+        <h2>Envíame un Mensaje</h2>
+        <app-contact-form></app-contact-form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="project-card">
+  <div class="project-image">
+    <img [src]="project.image" [alt]="project.title" />
+    <div class="project-overlay">
+      <div class="project-links">
+        <a *ngIf="project.demoUrl" [href]="project.demoUrl" class="btn btn-primary">Demo</a>
+        <a *ngIf="project.githubUrl" [href]="project.githubUrl" class="btn btn-secondary">GitHub</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="project-content">
+    <h3 class="project-title">{{ project.title }}</h3>
+    <p class="project-description">{{ project.description }}</p>
+    
+    <div class="project-technologies">
+      <span *ngFor="let tech of project.technologies" class="tech-tag">
+        {{ tech }}
+      </span>
+    </div>
+  </div>
+</div>

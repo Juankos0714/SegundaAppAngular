@@ -1,0 +1,130 @@
+.skills-section {
+  padding: 4rem 0;
+  background: #F8FAFC;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #1F2937;
+}
+
+.category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #E5E7EB;
+  background: white;
+  color: #6B7280;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: #2563EB;
+  color: #2563EB;
+  background: #EBF8FF;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-4px);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.skill-icon {
+  font-size: 2rem;
+}
+
+.skill-name {
+  font-weight: 700;
+  color: #1F2937;
+  flex-grow: 1;
+}
+
+.skill-percentage {
+  font-weight: 600;
+  color: #2563EB;
+  font-size: 1.1rem;
+}
+
+.skill-bar {
+  height: 8px;
+  background: #E5E7EB;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+.progress-frontend {
+  background: linear-gradient(90deg, #2563EB, #3B82F6);
+}
+
+.progress-backend {
+  background: linear-gradient(90deg, #059669, #10B981);
+}
+
+.progress-cloud {
+  background: linear-gradient(90deg, #EA580C, #F97316);
+}
+
+.skill-category {
+  font-size: 0.8rem;
+  color: #6B7280;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-filters {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

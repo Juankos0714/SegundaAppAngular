@@ -1,0 +1,29 @@
+<div class="gallery">
+  <h3 class="gallery-title">Galería de Proyectos</h3>
+  
+  <div class="gallery-grid">
+    <div 
+      *ngFor="let image of images()" 
+      class="gallery-item"
+      (click)="openImage(image)"
+    >
+      <img [src]="image.url" [alt]="image.title" />
+      <div class="gallery-overlay">
+        <h4>{{ image.title }}</h4>
+        <p>{{ image.description }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div *ngIf="selectedImage()" class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeModal()">&times;</button>
+      <img [src]="selectedImage()!.url" [alt]="selectedImage()!.title" />
+      <div class="modal-info">
+        <h3>{{ selectedImage()!.title }}</h3>
+        <p>{{ selectedImage()!.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

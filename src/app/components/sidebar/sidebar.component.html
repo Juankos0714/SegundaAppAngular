@@ -1,0 +1,21 @@
+<aside class="sidebar" [class.collapsed]="isCollapsed()">
+  <div class="sidebar-header">
+    <h3 *ngIf="!isCollapsed()">Navegación</h3>
+    <button class="toggle-btn" (click)="toggleSidebar()">
+      {{ isCollapsed() ? '→' : '←' }}
+    </button>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <a 
+      *ngFor="let item of menuItems"
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: item.route === '/'}"
+      class="nav-item"
+    >
+      <span class="nav-icon">{{ item.icon }}</span>
+      <span class="nav-label" [class.hidden]="isCollapsed()">{{ item.label }}</span>
+    </a>
+  </nav>
+</aside>

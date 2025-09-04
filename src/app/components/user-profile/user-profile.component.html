@@ -1,0 +1,32 @@
+<div class="profile-card">
+  <div class="profile-header">
+    <div class="profile-avatar">
+      <img [src]="user().avatar" [alt]="user().name" />
+      <div class="online-status" [class.online]="isOnline()"></div>
+    </div>
+    <div class="profile-info">
+      <h3 class="profile-name">{{ user().name }}</h3>
+      <p class="profile-role">{{ user().role }}</p>
+      <p class="profile-location">📍 {{ user().location }}</p>
+    </div>
+  </div>
+  
+  <div class="profile-stats">
+    <div class="stat-item">
+      <span class="stat-number">{{ user().projectsCount }}</span>
+      <span class="stat-label">Proyectos</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">{{ user().clientsCount }}</span>
+      <span class="stat-label">Clientes</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">2+</span>
+      <span class="stat-label">Años Exp.</span>
+    </div>
+  </div>
+  
+  <div class="profile-footer">
+    <p class="join-date">Miembro desde {{ user().joinDate }}</p>
+  </div>
+</div>

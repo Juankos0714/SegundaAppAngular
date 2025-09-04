@@ -1,0 +1,49 @@
+<div class="blog-page">
+  <div class="container">
+    <div class="blog-header">
+      <h1 class="page-title">Blog de Desarrollo</h1>
+      <p class="page-description">
+        Artículos sobre desarrollo web, mejores prácticas, y las últimas tendencias 
+        en tecnología. Compartiendo conocimiento y experiencias del mundo del desarrollo.
+      </p>
+    </div>
+    
+    <div class="blog-stats">
+      <div class="stat">
+        <span class="stat-number">{{ posts().length }}</span>
+        <span class="stat-label">Artículos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">15K+</span>
+        <span class="stat-label">Lectores</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">95%</span>
+        <span class="stat-label">Satisfacción</span>
+      </div>
+    </div>
+    
+    <div class="featured-post">
+      <div class="featured-content">
+        <span class="featured-badge">Artículo Destacado</span>
+        <h2>{{ posts()[0].title }}</h2>
+        <p>{{ posts()[0].excerpt }}</p>
+        <div class="featured-meta">
+          <span>{{ posts()[0].author }}</span>
+          <span>{{ posts()[0].readTime }} min de lectura</span>
+        </div>
+        <button class="btn btn-primary">Leer Artículo</button>
+      </div>
+      <div class="featured-image">
+        <img [src]="posts()[0].image" [alt]="posts()[0].title" />
+      </div>
+    </div>
+    
+    <div class="blog-grid">
+      <app-blog-card 
+        *ngFor="let post of posts().slice(1)" 
+        [post]="post"
+      ></app-blog-card>
+    </div>
+  </div>
+</div>

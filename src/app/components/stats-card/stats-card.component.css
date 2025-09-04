@@ -1,0 +1,82 @@
+.stats-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.stats-card.hovered {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.stats-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.stats-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.stats-label {
+  color: #6B7280;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.stats-card-blue {
+  border-color: #DBEAFE;
+}
+
+.stats-card-blue.hovered {
+  border-color: #2563EB;
+}
+
+.stats-card-blue .stats-number {
+  color: #2563EB;
+}
+
+.stats-card-green {
+  border-color: #D1FAE5;
+}
+
+.stats-card-green.hovered {
+  border-color: #059669;
+}
+
+.stats-card-green .stats-number {
+  color: #059669;
+}
+
+.stats-card-orange {
+  border-color: #FED7AA;
+}
+
+.stats-card-orange.hovered {
+  border-color: #EA580C;
+}
+
+.stats-card-orange .stats-number {
+  color: #EA580C;
+}
+
+.stats-card-purple {
+  border-color: #E9D5FF;
+}
+
+.stats-card-purple.hovered {
+  border-color: #7C3AED;
+}
+
+.stats-card-purple .stats-number {
+  color: #7C3AED;
+}

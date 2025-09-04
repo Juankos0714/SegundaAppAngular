@@ -1,0 +1,11 @@
+<div class="stats-card" 
+     [class]="'stats-card-' + color"
+     [class.hovered]="isHovered()"
+     (mouseenter)="onMouseEnter()"
+     (mouseleave)="onMouseLeave()">
+  <div class="stats-icon">{{ icon }}</div>
+  <div class="stats-content">
+    <h3 class="stats-number">{{ number }}</h3>
+    <p class="stats-label">{{ label }}</p>
+  </div>
+</div>
