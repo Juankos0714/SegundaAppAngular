@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { UserProfileComponent } from '../../components/user-profile/user-profile.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [UserProfileComponent],
+  imports: [UserProfileComponent,CommonModule],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })

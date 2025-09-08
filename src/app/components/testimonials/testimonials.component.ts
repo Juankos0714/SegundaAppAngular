@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 interface Testimonial {
@@ -13,6 +14,7 @@ interface Testimonial {
 @Component({
   selector: 'app-testimonials',
   standalone: true,
+  imports:[CommonModule],
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.css']
 })

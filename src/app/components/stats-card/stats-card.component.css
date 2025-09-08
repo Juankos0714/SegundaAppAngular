@@ -80,3 +80,18 @@
 .stats-card-purple .stats-number {
   color: #7C3AED;
 }
+.stats-card-blue .stats-icon {
+  color: #2563EB;
+}
+
+.stats-card-green .stats-icon {
+  color: #059669;
+}
+
+.stats-card-orange .stats-icon {
+  color: #EA580C;
+}
+
+.stats-card-purple .stats-icon {
+  color: #7C3AED;
+}

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 interface Skill {
@@ -10,17 +11,18 @@ interface Skill {
 @Component({
   selector: 'app-skills',
   standalone: true,
+  imports:[CommonModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent {
   skills = signal<Skill[]>([
-    { name: 'Angular', level: 90, category: 'Frontend', icon: '🅰️' },
-    { name: 'TypeScript', level: 85, category: 'Frontend', icon: '📘' },
-    { name: 'React', level: 80, category: 'Frontend', icon: '⚛️' },
+    { name: 'Angular', level: 30, category: 'Frontend', icon: '🅰️' },
+    { name: 'TypeScript', level: 70, category: 'Frontend', icon: '📘' },
+    { name: 'React', level: 60, category: 'Frontend', icon: '⚛️' },
     { name: 'Node.js', level: 75, category: 'Backend', icon: '🟢' },
     { name: 'Python', level: 70, category: 'Backend', icon: '🐍' },
-    { name: 'AWS', level: 65, category: 'Cloud', icon: '☁️' }
+    { name: 'Java', level: 95, category: 'Backend', icon: '☕' }
   ]);
   
   selectedCategory = signal('all');

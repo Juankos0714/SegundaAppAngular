@@ -1,20 +1,22 @@
 <div class="home-page">
   <app-hero></app-hero>
   
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <ng-container *ngFor="let stat of stats">
         <app-stats-card 
-          *ngFor="let stat of stats" 
           [icon]="stat.icon"
           [number]="stat.number"
           [label]="stat.label"
           [color]="stat.color"
-        ></app-stats-card>
-      </div>
+        >
+      </app-stats-card>
+      </ng-container>
     </div>
-  </section>
-  
+  </div>
+</section>
+            
   <app-skills></app-skills>
   
   <div class="container">

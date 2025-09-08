@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, signal } from '@angular/core';
 
 export interface BlogPost {
@@ -14,6 +15,7 @@ export interface BlogPost {
 @Component({
   selector: 'app-blog-card',
   standalone: true,
+  imports:[CommonModule],
   templateUrl: './blog-card.component.html',
   styleUrls: ['./blog-card.component.css']
 })

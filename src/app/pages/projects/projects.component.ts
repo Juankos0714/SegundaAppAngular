@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { ProjectCardComponent, Project } from '../../components/project-card/project-card.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectCardComponent],
+  imports: [ProjectCardComponent,CommonModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 interface GalleryImage {
@@ -10,6 +11,7 @@ interface GalleryImage {
 @Component({
   selector: 'app-image-gallery',
   standalone: true,
+  imports:[CommonModule],
   templateUrl: './image-gallery.component.html',
   styleUrls: ['./image-gallery.component.css']
 })

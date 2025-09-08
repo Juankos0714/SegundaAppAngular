@@ -20,7 +20,7 @@
         <h4>Redes Sociales</h4>
         <div class="social-links">
           <a *ngFor="let link of socialLinks" [href]="link.url" [title]="link.name">
-            <span>{{ link.icon }}</span>
+            <fa-icon [icon]="link.icon"></fa-icon>
             {{ link.name }}
           </a>
         </div>

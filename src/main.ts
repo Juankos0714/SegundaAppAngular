@@ -5,11 +5,12 @@ import { routes } from './app/app.routes';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './app/components/header/header.component';
 import { FooterComponent } from './app/components/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, FontAwesomeModule],
   template: `
     <app-header></app-header>
     <main class="main-content">
@@ -24,7 +25,9 @@ import { FooterComponent } from './app/components/footer/footer.component';
     }
   `]
 })
-export class App {}
+export class App {
+
+}
 
 bootstrapApplication(App, {
   providers: [
