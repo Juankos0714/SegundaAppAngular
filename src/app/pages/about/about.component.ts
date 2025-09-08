@@ -12,35 +12,29 @@ import { CommonModule } from '@angular/common';
 export class AboutComponent {
   experience = signal([
     {
-      company: 'Tech Solutions Inc',
-      position: 'Senior Full Stack Developer',
-      period: '2022 - Presente',
-      description: 'Liderando el desarrollo de aplicaciones web escalables con Angular y Node.js.'
+      company: 'Ubik', 
+      position: 'Scrum Master',
+      period: '2024 - Presente',
+      description: 'Liderando el desarrollo de aplicaciones web escalables con Angular y Spring Boot.'
     },
     {
-      company: 'Digital Agency',
+      company: 'ObraSmart',
       position: 'Frontend Developer',
-      period: '2020 - 2022',
+      period: '2024 - 2025',
       description: 'Desarrollé interfaces de usuario modernas y responsivas para clientes empresariales.'
-    },
-    {
-      company: 'StartupXYZ',
-      position: 'Junior Developer',
-      period: '2019 - 2020',
-      description: 'Inicio en el desarrollo web, trabajando en proyectos diversos y aprendiendo tecnologías modernas.'
     }
   ]);
   
   education = signal([
     {
-      degree: 'Máster en Desarrollo Web',
-      institution: 'Universidad Tecnológica',
-      year: '2019'
+      degree: 'Analisis y desarrollo de Software',
+      institution: 'SENA',
+      year: '2024'
     },
     {
-      degree: 'Ingeniería en Sistemas',
-      institution: 'Universidad Nacional',
-      year: '2017'
+      degree: 'Desarrollo Web Full Stack',
+      institution: 'Cymetria',
+      year: '2024'
     }
   ]);
   
