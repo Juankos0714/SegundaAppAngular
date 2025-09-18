@@ -1,5 +1,5 @@
 .stats-card {
-  background: white;
+  background: var(-bg--secondary);
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
