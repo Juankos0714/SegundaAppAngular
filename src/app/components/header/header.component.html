@@ -11,12 +11,22 @@
         <a routerLink="/projects" routerLinkActive="active">Proyectos</a>
         <a routerLink="/blog" routerLinkActive="active">Blog</a>
         <a routerLink="/contact" routerLinkActive="active">Contacto</a>
+        
+        <div class="mobile-theme-toggle">
+          <app-theme-toggle></app-theme-toggle>
+        </div>
       </div>
       
-      <div class="menu-toggle" (click)="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="header-controls">
+        <div class="desktop-theme-toggle">
+          <app-theme-toggle></app-theme-toggle>
+        </div>
+        
+        <div class="menu-toggle" (click)="toggleMenu()">
+          <span [class.active]="isMenuOpen"></span>
+          <span [class.active]="isMenuOpen"></span>
+          <span [class.active]="isMenuOpen"></span>
+        </div>
       </div>
     </nav>
   </div>

@@ -129,7 +129,34 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
+.blog-page {
+  background: var(--bg-color);
+}
 
+.page-title {
+  color: var(--text-color);
+}
+
+.page-description {
+  color: var(--text-secondary);
+}
+
+.stat {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.stat-number {
+  color: var(--primary-color);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+}
+
+.featured-post {
+  background: var(--gradient-primary);
+}
 @media (max-width: 1024px) {
   .featured-post {
     grid-template-columns: 1fr;

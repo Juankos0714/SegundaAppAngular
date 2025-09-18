@@ -132,6 +132,56 @@
 .education-item p {
   color: #6B7280;
 }
+.about-page {
+  background: var(--bg-color);
+}
+
+.about-title {
+  color: var(--text-color);
+}
+
+.about-description {
+  color: var(--text-secondary);
+}
+
+.details-section h2 {
+  color: var(--text-color);
+}
+
+.timeline::before {
+  background: var(--border-color);
+}
+
+.timeline-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.timeline-content h3 {
+  color: var(--text-color);
+}
+
+.timeline-content h4 {
+  color: var(--primary-color);
+}
+
+.timeline-content p {
+  color: var(--text-secondary);
+}
+
+.education-item {
+  background: var(--bg-secondary);
+  border-left-color: var(--success-color);
+  border: 1px solid var(--border-color);
+}
+
+.education-item h3 {
+  color: var(--text-color);
+}
+
+.education-item p {
+  color: var(--text-secondary);
+}
 
 @media (max-width: 1024px) {
   .about-sections {

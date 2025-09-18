@@ -141,7 +141,57 @@
   font-weight: 600;
   font-size: 1.1rem;
 }
+.contact-page {
+  background: var(--bg-color);
+}
 
+.contact-method {
+  background: var(--bg-secondary);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.contact-method:hover {
+  border-color: var(--primary-color);
+  background: var(--hover-bg);
+}
+
+.contact-icon {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.contact-label {
+  color: var(--text-secondary);
+}
+
+.contact-value {
+  color: var(--text-color);
+}
+
+.info-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.info-card h3 {
+  color: var(--text-color);
+}
+
+.hour-item {
+  border-bottom-color: var(--border-color);
+}
+
+.day {
+  color: var(--text-color);
+}
+
+.hours {
+  color: var(--text-secondary);
+}
+
+.response-time {
+  color: var(--success-color);
+}
 @media (max-width: 1024px) {
   .contact-content {
     grid-template-columns: 1fr;
