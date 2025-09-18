@@ -1,4 +1,3 @@
-// src/app/components/theme-toggle/theme-toggle.component.ts
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../service/theme.service';
