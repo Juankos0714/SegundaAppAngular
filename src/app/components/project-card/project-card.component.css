@@ -1,14 +1,14 @@
 .project-card {
-  background: white;
+  background: var(--bg-secondary);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   transition: all 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .project-image {
@@ -59,7 +59,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  color: #1F2937;
+  color: var(--text-color);
 }
 
 .project-description {
@@ -75,8 +75,8 @@
 }
 
 .tech-tag {
-  background: #EBF8FF;
-  color: #2563EB;
+  background: var(--bg-color);
+  color:var(--primary-color);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.8rem;

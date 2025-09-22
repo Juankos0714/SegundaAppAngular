@@ -11,12 +11,12 @@
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: #1F2937;
+  color: var(--text-color);
 }
 
 .page-description {
   font-size: 1.1rem;
-  color: #6B7280;
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -28,7 +28,7 @@
   padding: 2rem;
   background: white;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
 }
 
 .filter-section h3 {
@@ -46,7 +46,7 @@
 
 .filter-btn {
   padding: 0.75rem 1.5rem;
-  border: 2px solid #E5E7EB;
+  border: 2px solid var(--border-color);
   background: transparent;
   color: #6B7280;
   border-radius: 2rem;
@@ -57,8 +57,8 @@
 
 .filter-btn:hover,
 .filter-btn.active {
-  border-color: #2563EB;
-  color: #2563EB;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
   background: #EBF8FF;
   transform: translateY(-2px);
 }
@@ -72,7 +72,7 @@
 .no-results {
   text-align: center;
   padding: 3rem;
-  color: #6B7280;
+  color: var(--text-secondary);
 }
 
 .no-results h3 {

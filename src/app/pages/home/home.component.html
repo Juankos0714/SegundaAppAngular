@@ -4,15 +4,16 @@
 <section class="stats-section">
   <div class="container">
     <div class="stats-grid">
-      <ng-container *ngFor="let stat of stats">
-        <app-stats-card 
-          [icon]="stat.icon"
-          [number]="stat.number"
-          [label]="stat.label"
-          [color]="stat.color"
-        >
-      </app-stats-card>
-      </ng-container>
+@for (stat of stats; track $index) {
+  <app-stats-card 
+    [icon]="stat.icon"
+    [number]="stat.number"
+    [label]="stat.label"
+    [color]="stat.color"
+  >
+  </app-stats-card>
+}
+
     </div>
   </div>
 </section>

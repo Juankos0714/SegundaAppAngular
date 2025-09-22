@@ -1,43 +1,88 @@
 <section class="testimonials">
   <h3 class="testimonials-title">Lo que dicen los clientes</h3>
-  
+
   <div class="testimonials-slider">
-    <div class="testimonial-card">
-      <div class="testimonial-header">
-        <img 
-          [src]="testimonials()[currentTestimonial()].avatar" 
-          [alt]="testimonials()[currentTestimonial()].name"
-          class="testimonial-avatar"
-        />
-        <div class="testimonial-info">
-          <h4 class="testimonial-name">{{ testimonials()[currentTestimonial()].name }}</h4>
-          <p class="testimonial-role">
-            {{ testimonials()[currentTestimonial()].role }} en {{ testimonials()[currentTestimonial()].company }}
-          </p>
-          <div class="testimonial-rating">
-            <span *ngFor="let star of getStars(testimonials()[currentTestimonial()].rating)">
-              {{ star }}
-            </span>
+    @switch (currentTestimonial()) {
+
+      @case (0) {
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img [src]="testimonials()[0].avatar" [alt]="testimonials()[0].name" class="testimonial-avatar" />
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">{{ testimonials()[0].name }}</h4>
+              <p class="testimonial-role">{{ testimonials()[0].role }} en {{ testimonials()[0].company }}</p>
+              <div class="testimonial-rating">
+                @for (star of getStars(testimonials()[0].rating); track $index) {
+                  <span>{{ star }}</span>
+                }
+              </div>
+            </div>
           </div>
+          <blockquote class="testimonial-message">
+            "{{ testimonials()[0].message }}"
+          </blockquote>
         </div>
-      </div>
-      
-      <blockquote class="testimonial-message">
-        "{{ testimonials()[currentTestimonial()].message }}"
-      </blockquote>
-    </div>
-    
-    <div class="testimonials-controls">
-      <button class="control-btn" (click)="prevTestimonial()" title="Anterior">‹</button>
-      <div class="testimonials-dots">
+      }
+
+      @case (1) {
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img [src]="testimonials()[1].avatar" [alt]="testimonials()[1].name" class="testimonial-avatar" />
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">{{ testimonials()[1].name }}</h4>
+              <p class="testimonial-role">{{ testimonials()[1].role }} en {{ testimonials()[1].company }}</p>
+              <div class="testimonial-rating">
+                @for (star of getStars(testimonials()[1].rating); track $index) {
+                  <span>{{ star }}</span>
+                }
+              </div>
+            </div>
+          </div>
+          <blockquote class="testimonial-message">
+            "{{ testimonials()[1].message }}"
+          </blockquote>
+        </div>
+      }
+
+      @case (2) {
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img [src]="testimonials()[2].avatar" [alt]="testimonials()[2].name" class="testimonial-avatar" />
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">{{ testimonials()[2].name }}</h4>
+              <p class="testimonial-role">{{ testimonials()[2].role }} en {{ testimonials()[2].company }}</p>
+              <div class="testimonial-rating">
+                @for (star of getStars(testimonials()[2].rating); track $index) {
+                  <span>{{ star }}</span>
+                }
+              </div>
+            </div>
+          </div>
+          <blockquote class="testimonial-message">
+            "{{ testimonials()[2].message }}"
+          </blockquote>
+        </div>
+      }
+
+      @default {
+        <div class="testimonial-card">
+          <p>No hay testimonios disponibles</p>
+        </div>
+      }
+    }
+  </div>
+
+  <div class="testimonials-controls">
+    <button class="control-btn" (click)="prevTestimonial()" title="Anterior">‹</button>
+    <div class="testimonials-dots">
+      @for (testimonial of testimonials(); let i = $index; track i) {
         <button 
-          *ngFor="let testimonial of testimonials(); let i = index"
           class="dot"
           [class.active]="currentTestimonial() === i"
           (click)="currentTestimonial.set(i)"
         ></button>
-      </div>
-      <button class="control-btn" (click)="nextTestimonial()" title="Siguiente">›</button>
+      }
     </div>
+    <button class="control-btn" (click)="nextTestimonial()" title="Siguiente">›</button>
   </div>
 </section>
