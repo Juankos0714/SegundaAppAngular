@@ -6,13 +6,14 @@ import { TestimonialsComponent } from '../../components/testimonials/testimonial
 import { CommonModule } from '@angular/common';
 import { faCheckCircle, faCircleUser, faAlarmClock, faUser  } from '@fortawesome/free-regular-svg-icons';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent, StatsCardComponent, SkillsComponent, TestimonialsComponent,CommonModule],
+  imports: [HeroComponent, StatsCardComponent, SkillsComponent, TestimonialsComponent,CommonModule,RouterLink],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
